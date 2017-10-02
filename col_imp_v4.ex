@@ -15,13 +15,10 @@ defmodule M do
         body_pagi = Range.new(1,body)
             |>IO.inspect()
 
-        pagination = Enum.concat([fm_pagi,body_pagi])
-            |>Enum.chunk_every(2)
-            |>Stream.with_index(1)
-            |>Enum.each(fn({x,i}) -> 
-                if rem(i,2), 
-                do: Enum.reverse(x) end) #output is :ok ...
-
+        pagination = Stream.concat([fm_pagi,body_pagi])
+            |>Stream.chunk_every(2)
+            |>Enum.map_every(2,fn x -> Enum.reverse(x) end)
+            
          IO.inspect [pagination], charlists: :as_lists
 
     end    
