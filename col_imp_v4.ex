@@ -17,7 +17,7 @@ defmodule M do
 
         pagination = Stream.concat([fm_pagi,body_pagi])
             |>Stream.chunk_every(2)
-            |>Enum.map_every(2,fn x -> Enum.reverse(x) end) # first array = [2,1]
+            |>Enum.map_every(2, fn x -> Enum.reverse(x) end) # first array = [2,1]
             |>Enum.map_every(1, fn y -> Enum.reverse(y) end) # reverses it 'back' because the first array needs to be [1,2]
             
          IO.inspect [pagination], charlists: :as_lists
