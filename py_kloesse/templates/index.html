@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <div class="block">
+            <h class="title is-2">Kloesse</h>
+            <br>
+            <h class="subtitle is-4">A simple web app that divides the page extent of a book into chunks of 32 pages.</h>
+            <p> 
+                <br>
+                Even after using this to calculate the signature distribution of a book, do check with the printers. Each printer will have their own professional imposition software which should have the final say on the spread of the signatures.
+                <br>
+                The wiki can be found <a href="https://github.com/phlsphy/kloesse/wiki" >here</a>. 
+            </p>
+            <p>
+                <br>
+                <h class="title is-4">To start, enter the page extent of the Front Matter.</h> 
+                <div class="control">
+                    <form action="/display" method="post">
+                        <p>...psst, it has to be divisible by 4. <br> <input type="text" name="frontMatter"/> </p>
+                    
+                <br>
+                <h class="title is-4">Enter the total page extent of the book (without Front Matter).</h>
+                        <br> 
+                        <p><input type="text" name="totalPages"/> </p>
+                        <br>
+                        <button class="button is-link">Go!</button>
+                        <button class="button" type="reset" value="reset">Reset</button>
+                    </form>
+                </div>
+            </p>
+        </div>
+    </div>
+{% endblock %}

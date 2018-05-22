@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="container">
+        <div class="block">
+            <p id="element">
+                {{output}}
+                <ul id=element>
+                    {% for pairs in output %}
+                        <li> {{pairs}} </li>
+                    {% endfor %}
+                </ul>
+
+            </p>
+        </div>
+
+        <div class="control">
+            <form method="get" action="/">
+                <button class="button is-link">Return</button>
+            </form>
+            <br>
+        </div>
+    </div>
+
+{% endblock %}
