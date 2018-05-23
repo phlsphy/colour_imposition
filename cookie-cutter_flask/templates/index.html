@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="block">
+            <h class="title is-2">Lorem</h>
+            <br>
+            <h class="subtitle is-4">Lorem ipsum</h>
+            <p> 
+                <br>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, pariatur.
+                <br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quo ducimus. Repellendus vel sequi possimus cum tempora. Obcaecati culpa tempora nam corporis facilis, exercitationem quasi ratione sapiente voluptatibus porro dolorem.
+            </p>
+            <p>
+                <br>
+                <h class="title is-4">Input box below.</h>
+                <div class="control">
+                    <form action="/results" method="post">
+                        <input type="text" name="variable_name"/> </p>
+                        <br>
+                        <button class="button is-link">Go!</button>
+                        <button class="button" type="reset" value="reset">Reset</button>
+                    </form>
+                </div>
+            </p>
+        </div>
+    </div>
+{% endblock %}

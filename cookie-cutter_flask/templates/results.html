@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container">
+        <div class="block">
+            <p id>
+
+                {{ output }}
+            </p>
+        </div>
+
+        <div class="control">
+            <form method="get" action="/">
+                <button class="button is-link">Return</button>
+            </form>
+            <br>
+        </div>
+    </div>
+
+{% endblock %}
